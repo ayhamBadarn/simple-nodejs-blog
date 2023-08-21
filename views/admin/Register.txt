@@ -1,0 +1,13 @@
+<h3>Register</h3>
+
+<form action="/admin/register" method="post">
+
+  <label for="username"><b>UserName</b></label>
+  <input type="text" id="username" placeholder="Enter UserName" name="username" />
+
+  <label for="Password"><b>Password</b></label>
+  <input type="password" id="password" name="password" />
+
+  <button class="btn" type="submit">Register</button>
+
+</form>

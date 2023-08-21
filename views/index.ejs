@@ -1,0 +1,29 @@
+<div class="author">
+  <h1 class="author__heading">Hi, I am Blogger.</h1>
+  <p class="author__body">Web developer and content creator.</p>
+</div>
+
+<img src="/imgs/hero-image.webp" alt="person looking out through window" class="hero-image" width="981" height="528">
+
+<section class="articles">
+  <h2 class="articles__heading">Latest Posts</h2>
+  <ul class="article-ul">
+    <% data.forEach(post=> { %>
+      <li>
+        <a href="/category/<%= post.category._id %>" class="article-ul__category">
+          <%= post.category.name %>
+        </a>
+        <a href="/post/<%= post._id%>">
+          <div class="article-ul__title">
+            <p>
+              <%= post.title %>
+            </p>
+          </div>
+          <span class="article-list__date">
+            <%= post.createdAt.toDateString() %>
+          </span>
+        </a>
+      </li>
+      <% })%>
+  </ul>
+</section>

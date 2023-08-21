@@ -1,0 +1,25 @@
+<div class="author">
+  <h1 class="author__heading">
+    <%= category.name %> Results
+  </h1>
+</div>
+<% if(posts){%>
+  <ul class="article-ul">
+    <% posts.forEach(post=> { %>
+      <li>
+        <a href="/post/<%= post._id%>">
+          <div class="article-ul__title">
+            <p>
+              <%= post.title %>
+            </p>
+          </div>
+          <span class="article-list__date">
+            <%= post.createdAt.toDateString() %>
+          </span>
+        </a>
+      </li>
+      <% })%>
+  </ul>
+  <% }else{ %>
+    <p> No Posts </p>
+    <% } %>

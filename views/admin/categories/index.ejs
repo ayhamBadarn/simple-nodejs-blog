@@ -1,0 +1,24 @@
+<div class="admin-title">
+  <h2>Categories</h2>
+  <a href="/admin/add-category" class="button">Add Categories</a>
+</div>
+
+<% if(data.length> 0) {%>
+  <ul class="admin-posts">
+    <% data.forEach(category=>{%>
+      <li>
+        <p>
+          <%= category.name %>
+        </p>
+        <div class="admin-post-controls">
+          <a href="/admin/edit-category/<%= category._id%>" class="btn">Edit</a>
+          <form action="/admin/delete-category/<%=category._id%>?_method=DELETE" method="post">
+            <button type="submit" class="btn">Delete</button>
+          </form>
+        </div>
+      </li>
+      <%})%>
+  </ul>
+  <% }else{ %>
+    <p style="text-align: center;"> No Categories To View </p>
+    <%}%>
