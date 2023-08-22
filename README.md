@@ -1,8 +1,6 @@
 # simple-nodejs-blog
 This minimalist personal blog features articles elegantly showcased alongside categorized sections. Its straightforward design includes a user-friendly dashboard for seamless article and category creation.
 
-Sure, here's the description of the application you mentioned:
-
 ### Application Description:
 
 The developed application is a personal blog built using Node.js with HTML, CSS, JS, EJS, and integrates features for user login, session management, cookies, utilizing MongoDB database, MongoDB, and JWT authentication. The application serves as a simple personal blog where articles are showcased and organized into sections. The blog also includes an admin dashboard for adding articles and sections.
